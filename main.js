@@ -1,11 +1,10 @@
 //querySelector variables go below
 var receiveMessageButton = document.querySelector('.receive-message');
-var radioButtons = document.getElementsByName('message');
 var affirmationButton = document.getElementById('affirmation');
 var mantraButton = document.getElementById('mantra');
 var messageArea = document.querySelector('.random-text');
 var icon = document.querySelector('.icon');
-
+var 
 
 var affirmations = [
   'I don’t sweat the small stuff.',
@@ -55,9 +54,9 @@ function receiveMessage() {
   event.preventDefault();
   var affirmationsIndex = generateRandomIndex(affirmations); // going to generate random index on our affirmations array
   var mantrasIndex = generateRandomIndex(mantras); // going to generate random index on our mantras array
+  icon.remove('.icon');
 
   if (affirmationButton.checked) {
-    icon.classList.remove('.icon');
     messageArea.innerText = `${affirmations[affirmationsIndex]}`;
   } else if (mantraButton.checked) {
     messageArea.innerText = `${mantras[mantrasIndex]}`;
