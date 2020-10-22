@@ -1,25 +1,27 @@
 //querySelector variables go below
 var receiveMessageButton = document.querySelector('.receive-message');
-var radioButton = document.querySelectorAll('input[name="message"]');
+var radioButtons = document.getElementsByName('message');
+var affirmationButton = document.getElementById('affirmation');
+var mantraButton = document.getElementById('mantra');
 var messageArea = document.querySelector('.message-area');
 
 
 var affirmations = [
-'I don’t sweat the small stuff.',
-'I can. I will. End of story.',
-'I feed my spirit. I train my body. I focus my mind. It’s my time.',
-'I am in charge of how I feel and today I am choosing happiness.',
-'I am my own superhero.',
-'I am enough.',
-'I have the power to create change.',
-'I can do all the things.',
-'When you really want it, you are unstoppable.',
-'My past is not a reflection of my future.',
-'I will succeed today.',
-'I’m allowed to make mistakes; they don’t make up my whole story.',
-'I know exactly what to do to achieve success.',
-'I can absolutely do anything I put my mind to.',
-'My contributions to the world are valuable.'
+  'I don’t sweat the small stuff.',
+  'I can. I will. End of story.',
+  'I feed my spirit. I train my body. I focus my mind. It’s my time.',
+  'I am in charge of how I feel and today I am choosing happiness.',
+  'I am my own superhero.',
+  'I am enough.',
+  'I have the power to create change.',
+  'I can do all the things.',
+  'When you really want it, you are unstoppable.',
+  'My past is not a reflection of my future.',
+  'I will succeed today.',
+  'I’m allowed to make mistakes; they don’t make up my whole story.',
+  'I know exactly what to do to achieve success.',
+  'I can absolutely do anything I put my mind to.',
+  'My contributions to the world are valuable.'
 ];
 
 var mantras = [
@@ -44,8 +46,6 @@ var mantras = [
 receiveMessageButton.addEventListener('click', receiveMessage);
 
 
-
-
 //functions and event handlers go here
 function generateRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -55,14 +55,10 @@ function receiveMessage() {
   event.preventDefault();
   var affirmationsIndex = generateRandomIndex(affirmations); // going to generate random index on our affirmations array
   var mantrasIndex = generateRandomIndex(mantras); // going to generate random index on our mantras array
-  messageArea.innerText = `${affirmations[affirmationsIndex]}`; // sets the innerText to the randomly generated affirmation
+
+  if (affirmationButton.checked) {
+    messageArea.innerText = `${affirmations[affirmationsIndex]}`
+  } else if (mantraButton.checked) {
+    messageArea.innerText = `${mantras[mantrasIndex]}`
+  }
 }
-
-// var messageValue;
-// var message = new Message(affirmations[affirmationsIndex], mantras[mantrasIndex]);
-
-// for (var i = 0; i < radioButton.length; i++) {
-//   if (radioButton[i].checked) {
-//     messageValue = radioButton[i].value;
-//   }
-// }
