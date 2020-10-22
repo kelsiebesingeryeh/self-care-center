@@ -1,4 +1,7 @@
 //querySelector variables go below
+var receiveMessageButton = document.querySelector('.receive-message');
+var radioButton = document.querySelectorAll('input[name="message"]');
+var messageArea = document.querySelector('.message-area');
 
 
 var affirmations = [
@@ -38,6 +41,28 @@ var mantras = [
 ];
 
 //event listeners go below
+receiveMessageButton.addEventListener('click', receiveMessage);
+
+
 
 
 //functions and event handlers go here
+function generateRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
+function receiveMessage() {
+  event.preventDefault();
+  var affirmationsIndex = generateRandomIndex(affirmations); // going to generate random index on our affirmations array
+  var mantrasIndex = generateRandomIndex(mantras); // going to generate random index on our mantras array
+  messageArea.innerText = `${affirmations[affirmationsIndex]}`; // sets the innerText to the randomly generated affirmation
+}
+
+// var messageValue;
+// var message = new Message(affirmations[affirmationsIndex], mantras[mantrasIndex]);
+
+// for (var i = 0; i < radioButton.length; i++) {
+//   if (radioButton[i].checked) {
+//     messageValue = radioButton[i].value;
+//   }
+// }
