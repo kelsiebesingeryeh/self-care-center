@@ -1,3 +1,101 @@
+*{
+  /* border: 1px solid pink */
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-image: linear-gradient(to bottom, #134d71, #295d80, #3c6d90, #4e7ea0, #608fb0, #649fb9, #6daec0, #7abdc5, #90cabd, #b0d5b6, #d4ddb6, #f7e4bf);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+  min-width: 100%;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+p {
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 85px;
+  font-weight: bold;
+}
+
+form {
+  background-color: white;
+  width: 500px;
+  height: 75px;
+  border-radius: 10px;
+  font-style: italic;
+  display: inline-block;
+  position: relative;
+  top: 75px;
+}
+
+button {
+  display: block;
+  background-color: #134d71;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  width: 150px;
+  margin: 0 auto;
+  border-radius: 5px;
+  position: relative;
+  top: 25px;
+  padding: 3px;
+}
+
+#affirmation.radio {
+  position: relative;
+  top: 16px;
+  right: 60px;
+}
+
+#mantra.radio {
+  position: relative;
+  top: 16px;
+  left: 60px;
+}
+
+
+#affirmation-label {
+  position: relative;
+  right: 55px;
+  top: 15px;
+}
+
+#mantra-label {
+  position: relative;
+  left: 65px;
+  top: 15px;
+}
+
+.message-area {
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+  top: 150px;
+  width: 600px;
+  margin: auto;
+  height: 100px;
+}
+
+section img {
+  width: 10%;
+  position: relative;
+  top: 20%;
+}
+
+
 /* font-family: 'Quicksand', sans-serif;
 COLORS
 light-yellow - #f7e4bf;
