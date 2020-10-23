@@ -4,7 +4,7 @@ var affirmationButton = document.getElementById('affirmation');
 var mantraButton = document.getElementById('mantra');
 var messageArea = document.querySelector('.random-text');
 var icon = document.querySelector('.icon');
-var 
+var removeMessageButton = document.querySelector('#remove-message-button');
 
 var affirmations = [
   'I don’t sweat the small stuff.',
@@ -42,8 +42,12 @@ var mantras = [
   'If it doesn’t challenge you, it won’t change you.'
 ];
 
+
 //event listeners go below
 receiveMessageButton.addEventListener('click', receiveMessage);
+receiveMessageButton.addEventListener('click', displayDeleteButton);
+removeMessageButton.addEventListener('click', removeMessageAlert);
+removeMessageButton.addEventListener('click', removeMessage);
 
 //functions and event handlers go here
 function generateRandomIndex(array) {
@@ -63,6 +67,13 @@ function receiveMessage() {
   }
 }
 
-function deleteMessage() {
+function displayDeleteButton() {
+  removeMessageButton.classList.remove('hidden');
+}
 
+function removeMessageAlert() {
+  alert("Sorry you didn't like this message. It has been removed and you will no longer see it.");
+}
+function removeMessage() {
+  messageArea.innerText = "";
 }
