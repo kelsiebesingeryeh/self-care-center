@@ -24,37 +24,37 @@ h1 {
 p {
   color: white;
   font-weight: bold;
-  margin-top: 100px;
+  margin-top: 10%;
   text-align: center;
   position: relative;
-  top: 10px;
+  top: 0.75em;
 }
 
 form {
   background-color: white;
-  border-radius: 10px;
+  border-radius: 0.75em;
   font-style: italic;
-  height: 75px;
+  height: 4.65em;
   text-align: center;
-  width: 500px;
+  width: 55%;
   margin: auto;
 }
 
 button {
   background-color: #134d71;
-  border-radius: 5px;
+  border-radius: 0.5em;
   color: white;
   font-family: 'Quicksand', sans-serif;
-  margin: 25px;
-  width: 150px;
+  margin: 5%;
+  width: 30%;
 }
 
 .radio {
-  padding-top: 5px;
+  padding-top: 1%;
 }
 
 .radio-button-wrapper {
-  margin: 0px 50px;
+  margin: 0% 10%;
 }
 
 .message-area {
@@ -68,8 +68,8 @@ button {
 }
 
 .icon {
-  width: 60px;
-  margin: 20px;
+  width: 9%;
+  margin: 3%;
 }
 
 .random-text {
@@ -82,12 +82,12 @@ button {
 
 #remove-message-button {
   background-color: red;
-  border-radius: 5px;
+  border-radius: .5em;
   color: white;
   font-family: 'Quicksand', sans-serif;
-  margin: 25px;
-  width: 150px;
-  margin-left: 375px;
+  margin: 5%;
+  width: 15%;
+  margin-left: 42%;
 }
 
 .hidden {
