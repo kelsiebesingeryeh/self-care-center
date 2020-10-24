@@ -88,4 +88,9 @@ function removeMessageFromArray() {
       affirmations.splice(i, 1);
     }
   }
+  for (var i = 0; i < mantras.length; i++) {
+    if (messageArea.innerText === mantras[i]) {
+      mantras.splice(i, 1);
+    }
+  }
 }
