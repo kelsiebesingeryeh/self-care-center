@@ -1,12 +1,9 @@
 //querySelector variables go below
 var receiveMessageButton = document.querySelector('.receive-message');
-var affirmationButton = document.getElementById('affirmation');
-var mantraButton = document.getElementById('mantra');
 var messageArea = document.querySelector('.random-text');
 var icon = document.querySelector('.icon');
 var removeMessageButton = document.querySelector('#remove-message-button');
-var iconToggle = document.querySelector('.icon-toggle');
-var radioButton = document.getElementsByName('message');
+var radioButtons = document.getElementsByName('message');
 
 var affirmations = [
   'I don’t sweat the small stuff.',
@@ -44,10 +41,9 @@ var mantras = [
   'If it doesn’t challenge you, it won’t change you.'
 ];
 
-var currentMessage;
 
 //event listeners go below
-receiveMessageButton.addEventListener('click', receiveMessage);
+receiveMessageButton.addEventListener('click', revealMessage);
 receiveMessageButton.addEventListener('click', displayDeleteButton);
 removeMessageButton.addEventListener('click', removeMessageAlert);
 removeMessageButton.addEventListener('click', removeMessage);
@@ -57,15 +53,15 @@ function generateRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-function receiveMessage() {
+function revealMessage() {
   event.preventDefault();
   var affirmationsIndex = generateRandomIndex(affirmations); // going to generate random index on our affirmations array
   var mantrasIndex = generateRandomIndex(mantras); // going to generate random index on our mantras array
   icon.classList.add('hidden');
 
-  if (affirmationButton.checked) {
+  if (radioButtons[0].checked) {
     messageArea.innerText = `${affirmations[affirmationsIndex]}`;
-  } else if (mantraButton.checked) {
+  } else if (radioButtons[1].checked) {
     messageArea.innerText = `${mantras[mantrasIndex]}`;
   }
 }
@@ -75,18 +71,21 @@ function displayDeleteButton() {
 }
 
 function removeMessageAlert() {
-  alert("Message has been cleared.");
+  alert("Message has been cleared!");
+  removeMessageFromArray();
 }
 
 function removeMessage() {
   messageArea.innerText = ""
   removeMessageButton.classList.add('hidden');
   icon.classList.remove('hidden')
+  removeMessageFromArray()
 }
 
-// for (var i = 0; i < radioButton.length; i++) {
-//   if (!radioButton[i].checked) {
-//     alert("You must select an option.")
-//     removeMessageButton.classList.add('hidden');
-//     icon.classList.remove('hidden')
-//   }
+function removeMessageFromArray() {
+  for (var i = 0; i < affirmations.length; i++) {
+    if (messageArea.innerText === affirmations[i]) {
+      affirmations.splice(i, 1);
+    }
+  }
+}
