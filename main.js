@@ -6,6 +6,7 @@ var messageArea = document.querySelector('.random-text');
 var icon = document.querySelector('.icon');
 var removeMessageButton = document.querySelector('#remove-message-button');
 var iconToggle = document.querySelector('.icon-toggle');
+var radioButton = document.getElementsByName('message');
 
 var affirmations = [
   'I don’t sweat the small stuff.',
@@ -82,3 +83,10 @@ function removeMessage() {
   removeMessageButton.classList.add('hidden');
   icon.classList.remove('hidden')
 }
+
+// for (var i = 0; i < radioButton.length; i++) {
+//   if (!radioButton[i].checked) {
+//     alert("You must select an option.")
+//     removeMessageButton.classList.add('hidden');
+//     icon.classList.remove('hidden')
+//   }
