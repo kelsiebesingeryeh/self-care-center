@@ -42,13 +42,11 @@ var mantras = [
 ];
 
 
-//event listeners go below
 receiveMessageButton.addEventListener('click', revealMessage);
-receiveMessageButton.addEventListener('click', displayDeleteButton);
+receiveMessageButton.addEventListener('click', displayRemoveMessageButton);
 removeMessageButton.addEventListener('click', removeMessageAlert);
 removeMessageButton.addEventListener('click', removeMessage);
 
-//functions and event handlers go here
 function generateRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
@@ -66,23 +64,22 @@ function revealMessage() {
   }
 }
 
-function displayDeleteButton() {
+function displayRemoveMessageButton() {
   removeMessageButton.classList.remove('hidden');
 }
 
 function removeMessageAlert() {
-  alert("Message has been cleared!");
-  removeMessageFromArray();
+  alert("We're sorry you didn't like this message. This message has been removed.");
+  removeMessageFromList();
 }
 
 function removeMessage() {
   messageArea.innerText = ""
   removeMessageButton.classList.add('hidden');
   icon.classList.remove('hidden')
-  removeMessageFromArray()
 }
 
-function removeMessageFromArray() {
+function removeMessageFromList() {
   for (var i = 0; i < affirmations.length; i++) {
     if (messageArea.innerText === affirmations[i]) {
       affirmations.splice(i, 1);

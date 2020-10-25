@@ -12,7 +12,6 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'Quicksand', sans-serif;
-  font-size: 100%
   min-height: 100%;
   min-width: 100%;
 }
@@ -104,8 +103,7 @@ button {
     display: flex;
     flex-direction: column;
     font-family: 'Quicksand', sans-serif;
-    font-size: 100%
-    min-height: 100%;
+    font-size: 100% min-height: 100%;
     min-width: 100%;
   }
 
@@ -118,9 +116,7 @@ button {
   body {
     align-items: center;
   }
-
 }
-
 
 /* font-family: 'Quicksand', sans-serif;
 COLORS
