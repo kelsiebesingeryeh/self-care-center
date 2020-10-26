@@ -17,13 +17,13 @@ body {
 }
 
 h1 {
-  color: white;
+  color: #ffffff;
   font: 1.125em;
   text-align: center;
 }
 
 p {
-  color: white;
+  color: #ffffff;
   font-weight: bold;
   margin-top: 10%;
   position: relative;
@@ -32,7 +32,7 @@ p {
 }
 
 form {
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 0.75em;
   font-style: italic;
   height: 4.65em;
@@ -44,7 +44,7 @@ form {
 button {
   background-color: #134d71;
   border-radius: 0.5em;
-  color: white;
+  color: #ffffff;
   font-family: 'Quicksand', sans-serif;
   margin: 3%;
   width: 31%;
@@ -64,7 +64,7 @@ button:hover {
 }
 
 .message-area {
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 10px;
   height: 100px;
   margin: 100px;
@@ -78,7 +78,18 @@ button:hover {
   margin: 3%;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .random-text {
+  animation: fadeIn ease-in 5s;
+  color: #000000;
   position: absolute;
   top: 40%;
   left: 0;
@@ -89,7 +100,7 @@ button:hover {
 #remove-message-button {
   background-color: red;
   border-radius: .5em;
-  color: white;
+  color: #ffffff;
   font-family: 'Quicksand', sans-serif;
   margin: 5%;
   margin-left: 42%;

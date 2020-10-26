@@ -41,9 +41,11 @@ var mantras = [
   'If it doesn’t challenge you, it won’t change you.'
 ];
 
+var repeatMessages = []
 
 receiveMessageButton.addEventListener('click', revealMessage);
 receiveMessageButton.addEventListener('click', displayRemoveMessageButton);
+// receiveMessageButton.addEventListener('click', removeRepeatMessages);
 removeMessageButton.addEventListener('click', removeMessageAlert);
 removeMessageButton.addEventListener('click', removeMessage);
 
@@ -90,4 +92,14 @@ function removeMessageFromList() {
       mantras.splice(i, 1);
     }
   }
+
+  // function removeRepeatMessages() {
+  //   for (var i = 0; i < affirmations.length; i++) {
+  //     if (messageArea.innerText === affirmations[i]) {
+  //       affirmations.splice(i, 1);
+  //     } else {
+  //       alert('You will start to see messages again!')
+  //     }
+  //   }
+  // }
 }
