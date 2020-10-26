@@ -1,7 +1,6 @@
-//querySelector variables go below
-var receiveMessageButton = document.querySelector('.receive-message');
 var messageArea = document.querySelector('.random-text');
 var icon = document.querySelector('.icon');
+var receiveMessageButton = document.querySelector('.receive-message');
 var removeMessageButton = document.querySelector('#remove-message-button');
 var radioButtons = document.getElementsByName('message');
 
@@ -41,11 +40,8 @@ var mantras = [
   'If it doesn’t challenge you, it won’t change you.'
 ];
 
-var repeatMessages = []
-
 receiveMessageButton.addEventListener('click', revealMessage);
 receiveMessageButton.addEventListener('click', displayRemoveMessageButton);
-// receiveMessageButton.addEventListener('click', removeRepeatMessages);
 removeMessageButton.addEventListener('click', removeMessageAlert);
 removeMessageButton.addEventListener('click', removeMessage);
 
@@ -55,8 +51,8 @@ function generateRandomIndex(array) {
 
 function revealMessage() {
   event.preventDefault();
-  var affirmationsIndex = generateRandomIndex(affirmations); // going to generate random index on our affirmations array
-  var mantrasIndex = generateRandomIndex(mantras); // going to generate random index on our mantras array
+  var affirmationsIndex = generateRandomIndex(affirmations);
+  var mantrasIndex = generateRandomIndex(mantras);
   icon.classList.add('hidden');
 
   if (radioButtons[0].checked) {
@@ -92,14 +88,4 @@ function removeMessageFromList() {
       mantras.splice(i, 1);
     }
   }
-
-  // function removeRepeatMessages() {
-  //   for (var i = 0; i < affirmations.length; i++) {
-  //     if (messageArea.innerText === affirmations[i]) {
-  //       affirmations.splice(i, 1);
-  //     } else {
-  //       alert('You will start to see messages again!')
-  //     }
-  //   }
-  // }
 }

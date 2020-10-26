@@ -65,12 +65,12 @@ button:hover {
 
 .message-area {
   background-color: #ffffff;
-  border-radius: 10px;
-  height: 100px;
-  margin: 100px;
+  border-radius: .625em;
+  height: 6.25em;
+  margin: 6.25em;
   position: relative;
   text-align: center;
-  width: 700px;
+  width: 43em;
 }
 
 .icon {
@@ -109,6 +109,47 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+  body {
+    margin: auto;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  form {
+    height: 9.5em;
+    margin: auto;
+    width: 13em;
+  }
+
+
+  .message-area {
+    height: 9.5em;
+    width: 19em;
+  }
+
+  button {
+    position: relative;
+    top: 18%;
+    width: 47%;
+  }
+
+  .icon {
+    width: 6em;
+    margin: 9%;
+  }
+
+  .radio-button-wrapper {
+    margin: 0%;
+    font-size: 1em;
+    display: block;
+    text-align:left;
+    line-height: 2em;
+  }
 }
 
 /* font-family: 'Quicksand', sans-serif;
