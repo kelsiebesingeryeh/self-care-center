@@ -1,40 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-
-<body>
-  <main>
-    <header>
-      <h1>✨ Self Care Center ✨</h1>
-    </header>
-    <p>Which type of message?</p>
-    <form>
-      <div class="radio">
-        <span class="radio-button-wrapper">
-          <input type="radio" id="affirmation" value="affirmation" name="message" class="radio" required>
-          <label for="affirmation" id="affirmation-label">affirmation</label>
-        </span>
-        <span class="radio-button-wrapper">
-          <input type="radio" id="mantra" value="mantra" name="message" class="radio" required>
-          <label for="mantra" id="mantra-label">mantra</label>
-        </span>
-      </div>
-      <button class="receive-message">Receive Message</button>
-    </form>
-    <section class="message-area">
-      <div class="random-text"></div>
-      <div class=icon-toggle>
-        <img class="icon" src="file:///Users/kelsiebesinger/turing/1module/self-care-center/assets/meditate.svg" alt="meditation-icon">
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>✨ Self Care Center ✨</h1>
+      </header>
+      <p>Which type of message?</p>
+      <form>
+        <div class="radio">
+          <span class="radio-button-wrapper">
+            <input type="radio" id="affirmation" value="affirmation" name="message" class="radio" required>
+            <label for="affirmation" id="affirmation-label">affirmation</label>
+          </span>
+          <span class="radio-button-wrapper">
+            <input type="radio" id="mantra" value="mantra" name="message" class="radio" required>
+            <label for="mantra" id="mantra-label">mantra</label>
+          </span>
+        </div>
+        <button class="receive-message">Receive Message</button>
+      </form>
+      <section class="message-area">
+        <div class="random-text"></div>
+        <div class="icon-toggle">
+          <img class="icon" src="file:///Users/kelsiebesinger/turing/1module/self-care-center/assets/meditate.svg" alt="meditation-icon">
         <div>
-    </section>
-    <button id="remove-message-button" class="hidden">Remove This Message</button>
-  </main>
-  <script type="text/javascript" src="main.js"></script>
-</body>
-
+      </section>
+      <button id="remove-message-button" class="hidden">Remove This Message</button>
+    </main>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
 </html>
