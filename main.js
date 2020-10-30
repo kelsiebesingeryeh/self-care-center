@@ -41,7 +41,7 @@ var mantras = [
 ];
 
 receiveMessageButton.addEventListener('click', revealMessage);
-receiveMessageButton.addEventListener('click', displayRemoveMessageButton);
+receiveMessageButton.addEventListener('click', show(removeMessageButton));
 removeMessageButton.addEventListener('click', removeMessageAlert);
 removeMessageButton.addEventListener('click', removeMessage);
 
@@ -53,39 +53,43 @@ function revealMessage() {
   event.preventDefault();
   var affirmationsIndex = generateRandomIndex(affirmations);
   var mantrasIndex = generateRandomIndex(mantras);
-  icon.classList.add('hidden');
+  hide(icon);
 
   if (radioButtons[0].checked) {
-    messageArea.innerText = `${affirmations[affirmationsIndex]}`;
+    setMessage(affirmations[affirmationsIndex]);
   } else if (radioButtons[1].checked) {
-    messageArea.innerText = `${mantras[mantrasIndex]}`;
+    setMessage(mantras[mantrasIndex]);
   }
 }
 
-function displayRemoveMessageButton() {
-  removeMessageButton.classList.remove('hidden');
+function setMessage(message) {
+  messageArea.innerText = message;
 }
 
 function removeMessageAlert() {
   alert("We're sorry you didn't like this message. This message has been removed.");
-  removeMessageFromList();
+  removeMessageFromList(affirmations);
+  removeMessageFromList(mantras);
+}
+
+function hide(element) {
+  element.classList.add('hidden');
+}
+
+function show(element) {
+    element.classList.remove('hidden')
 }
 
 function removeMessage() {
-  messageArea.innerText = ""
-  removeMessageButton.classList.add('hidden');
-  icon.classList.remove('hidden')
+  setMessage("");
+  hide(removeMessageButton);
+  show(icon);
 }
 
-function removeMessageFromList() {
-  for (var i = 0; i < affirmations.length; i++) {
-    if (messageArea.innerText === affirmations[i]) {
-      affirmations.splice(i, 1);
-    }
-  }
-  for (var i = 0; i < mantras.length; i++) {
-    if (messageArea.innerText === mantras[i]) {
-      mantras.splice(i, 1);
+function removeMessageFromList(message) {
+  for (var i = 0; i < message.length; i++) {
+    if (messageArea.innerText === message[i]) {
+      message.splice(i, 1);
     }
   }
 }
